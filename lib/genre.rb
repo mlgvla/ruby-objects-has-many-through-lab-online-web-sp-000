@@ -14,8 +14,8 @@ class Genre
   end
 
   def songs
-    Song.all.collect do |song|
-      if song.genre.name == self.name
+    Song.all.select do |song|
+      if song.genre == self
         song
       end
     end
