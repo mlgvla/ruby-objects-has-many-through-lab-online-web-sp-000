@@ -22,7 +22,6 @@ class Genre
   end
 
   def artists
-    binding.pry
     songs.collect {|song| song.artist}
   end
 
