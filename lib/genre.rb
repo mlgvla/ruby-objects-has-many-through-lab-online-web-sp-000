@@ -15,14 +15,13 @@ class Genre
 
   def songs
     Song.all.collect do |song|
-      if song.genre.name == self.name
+      if song.genre == self.name
         song
       end
     end
   end
 
   def artists
-    binding.pry
     songs.collect {|song| song.artist}
   end
 
